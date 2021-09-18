@@ -12,15 +12,15 @@ int main(int argc, char **argv)
     // ros初始化
     ros::init(argc, argv, "yolo_fast");          //创建一个node
     ros::NodeHandle n;                        //创建一个句柄
-    ros::NodeHandle private_nh("~");
+    ros::NodeHandle _nh("~");
     ros::Publisher box_pub = n.advertise<yolo_fast::position>("ob_dectetion", 1000);
     std::string model_param_file,model_bin_file;
     //设置默认参数
     //model_param_file = "/opt.param";
     //model_bin_file = "/opt.bin";
     
-    private_nh.param<std::string>("model_param_file", model_param_file,"/opt.param");
-    private_nh.param<std::string>("model_bin_file", model_bin_file,"/opt.bin");
+    _nh.param<std::string>("model_param_file", model_param_file,"/opt.param");
+    _nh.param<std::string>("model_bin_file", model_bin_file,"/opt.bin");
  
 
     static const char* class_names[] = {
