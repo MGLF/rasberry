@@ -21,8 +21,10 @@ find_package(catkin REQUIRED COMPONENTS
 
 find_package(OpenCV REQUIRED COMPONENTS core imgproc highgui objdetect)
 
-## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+add_message_files(DIRECTORY msg
+   FILES
+   position.msg
+ )
 
 
 ## Generate added messages and services with any dependencies listed here

@@ -1,0 +1,6 @@
+<launch>
+  <node name="yolo_node" pkg="yolo_fast" type="yolo_node" respawn="false">
+    <param name ="model_param_file" type="string" value="/home/xd1/My_data/ros_moveit/src/yolo_fast/model/yolo-fastestv2-opt.param"  />
+    <param name ="model_bin_file" type="string"   value="/home/xd1/My_data/ros_moveit/src/yolo_fast/model/yolo-fastestv2-opt.bin"  />
+  </node>
+</launch>
